@@ -120,23 +120,6 @@ sftp -i /caminho/para/sua-chave-privada.pem sftpuser@IP-ou-DNS-da-instancia
 
 Se tudo estiver configurado corretamente, você deve se conectar sem precisar fornecer uma senha, utilizando a chave privada.
 
-
-## Entradas
-
-| Variável         | Descrição                                          | Padrão      |
-|------------------|----------------------------------------------------|-------------|
-| `instance_type`  | O tipo de instância EC2 para o servidor SFTP       | `t3.micro`  |
-| `region`         | A região AWS para implantar os recursos            | `us-east-1` |
-| `key_name`       | Nome do par de chaves SSH para acessar a instância | `my-key`    |
-| `ebs_size`       | Tamanho do volume EBS anexado à instância EC2      | `20`        |
-
-## Saídas
-
-| Saída            | Descrição                                           |
-|------------------|-----------------------------------------------------|
-| `sftp_public_ip` | O endereço IP público da instância EC2 para acesso SFTP |
-| `sftp_user`      | O nome de usuário SFTP para conectar ao servidor    |
-
 ## Limpeza
 
 Para destruir a infraestrutura e limpar os recursos na AWS:
